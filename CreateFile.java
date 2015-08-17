@@ -77,7 +77,8 @@ class FileWriteThread extends Thread{
     
     public void run () {
         RandomAccessFile raf = null;
-        System.out.println(this.getName() + " :: writing " + (beg/(1024*1024)) + " to " + (((beg+length))/(1024*1024)) + "Mb");
+        System.out.println(this.getName() + " :: writing " + (beg/(1024*1024)) + 
+                    " to " + (((beg+length))/(1024*1024)) + "Mb");
         try {
             raf = new RandomAccessFile(pathname, "rw");
             // 获得RandomAccessFile的Channle
